@@ -1,0 +1,210 @@
+/* universal */
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    html, body{
+        height: 100%;
+        color: #fad694;
+        font-family: Arial, 'Microsoft YaHei', 'STHeiti';
+    }
+    body{
+        background-image: url(E:\前端\页面制作/img/公司介绍.jpg);
+        background-position: top center;
+        background-color: #222;
+        background-repeat: no-repeat;
+        overflow: auto;
+        //position: relative;
+    }
+    p{
+        font-size: 1em;
+        margin: 0.5em 0 0.5em;
+        padding: 0.5em 0 0.5em;
+        line-height: 1.5em;
+    }
+    p span{
+        color: #a08a70;
+    }
+    h1{
+        font-size: 2em;
+        color: #aa9579;
+        margin-bottom: 1.5em;
+    }
+    h2{
+        font-size: 1.4em;
+        color: #776648;
+    }
+    samp{
+        font-size: 1.2em;
+        font-family: Arial, 'KaiTi', 'STKaiti';
+    }
+/* header */
+    #navbar{
+        height: 40px;
+        margin-top: 30px;
+        text-align: center;
+        padding: 0;
+    }
+    #navbar ul{
+        margin-bottom: 0px;
+        list-style: none; 
+    }
+    .tab{
+        height: 2em;
+        overflow: hidden;
+        line-height: 2em;
+    }
+    .tab a{
+        padding: 0;
+    }
+    .tab a:hover{
+        text-decoration: underline;
+    }
+    .tab a:hover .egtitle{
+        display: none;
+    }
+    #line{
+        height: 2px;
+        background-color: #fad694;
+        width: 100%;
+    }
+    #underline{
+        top: 2px;
+        left: 0px;
+    }
+    /* ribbon menu */
+        .ribbon-menu .link-group{
+            background-color: rgb(44, 44, 44);
+            position: absolute;
+            height: auto !important;
+            z-index: 999;
+            width: 2em !important;
+            padding: 0.5em;
+            margin-left: 10px;
+        }
+        .ribbon-menu .link-group:after{
+            left: 0;
+            content: "";
+            position: absolute;
+            display: block;
+            border: 1em solid rgb(44, 44, 44);
+            border-bottom-color: transparent;
+        }
+        .ribbon-menu .link-group:hover{
+            background-color: rgba(44, 44, 44,0.8);
+            width: 120px !important;
+            margin-left: 0px;
+            padding: 0em;
+        }
+        .ribbon-menu .link-group:hover:after{
+            display: none;
+        }
+        .ribbon-menu .link-group .group-item.item-hidden.active{
+            display: block;
+        }
+        .ribbon-menu .link-group .group-item:not(.active),
+        .ribbon-menu .link-group .clearline{
+            display: none;
+        }
+        .ribbon-menu .link-group:hover .group-item:not(.active),
+        .ribbon-menu .link-group:hover .clearline{
+            display: block;
+        }
+        .ribbon-menu .link-group:hover .group-item.item-hidden{
+            display: none;
+        }
+        .ribbon-menu .link-group:hover .item-hidden.active a{
+            text-align: right;
+            padding: 10px;
+        }
+        .ribbon-menu .group-item.active a[data-toggle="tab"]{
+            background-color: rgb(44, 44, 44);
+        }
+        .ribbon-menu .tab-content{
+            width: 100%;
+        }
+/* content */
+    .pane{
+        width: 100%;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .link-group{
+        background-color: rgba(0,0,0,0.2);
+        height: 100%;
+        padding: 0px;
+    }
+    .link-group ul{
+        margin-bottom: 0px;
+        list-style: none; 
+    }
+    .group-item a{
+        display: block;
+        padding: 20px 0px;
+        text-align: center;
+        color: #776648;
+    }
+    .group-item.item-hidden{
+        display: none;
+    }
+    .group-item.active a[data-toggle="tab"], .group-item:hover a{
+        background-color: rgba(255,255,255,0.1);
+        color: #fad694;
+        text-decoration: none;
+    }
+    .pane div{
+        height: 100%;
+    }
+    .tab-content{
+        padding: 2% 5%;
+    }
+
+    /* base */
+    .pane{
+            height: 500px;
+            width:  1100px;
+        }
+
+/* footer */
+    #footer{
+        padding: 20px 0;
+    }
+ 
+    #ft-lnks{
+        text-align: right;
+    }
+    #footer .link{
+        border-width: 0px;
+        border-left-width: 1px;
+        border-color: rgba(255,255,255,0.2);
+        padding: 0 15px;
+    }
+    #copyright{
+        margin-top:15px;
+        text-align: right;
+        padding: 0px;
+    }
+/* bootstrap over write */
+    a{
+        color: #fad694;
+    }
+    a:hover{
+        color: #fad694;
+    }
+    a:focus{
+        color: #fad694;
+        outline: none;
+        text-decoration: none;
+    }
+    #logo{
+        font-size: 48px;
+        font-family:Georgia,"Times New Roman",Serif;
+        margin-top: 10px;
+        text-indent: 120px;
+        text-align: left;
+    }
+    #biaoqian{
+        color: #fad694;
+        font-size: 14px;
+        text-align: left;
+        text-indent: 90px;
+    }

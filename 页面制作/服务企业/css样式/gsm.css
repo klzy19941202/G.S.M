@@ -1,0 +1,263 @@
+/* universal */
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    html, body{
+        height: 100%;
+        color: #fad694;
+        font-family: Arial, 'Microsoft YaHei', 'STHeiti';
+    }
+    body{
+        background-image: url(../img/bg-home.jpg);
+        background-position: top center;
+        background-color: #222;
+        background-repeat: no-repeat;
+        overflow: auto;
+        //position: relative;
+    }
+
+/* header */
+    #navbar{
+        height: 40px;
+        margin-top: 30px;
+        text-align: center;
+        padding: 0;
+    }
+    #navbar ul{
+        margin-bottom: 0px;
+        list-style: none; 
+    }
+    .tab{
+        height: 2em;
+        overflow: hidden;
+        line-height: 2em;
+    }
+    .tab a{
+        padding: 0;
+    }
+    .tab a:hover{
+        text-decoration: none;
+    }
+    .tab a:hover .egtitle{
+        display: none;
+    }
+    #line{
+        height: 2px;
+        background-color: #fad694;
+        width: 100%;
+    }
+    #underline{
+        top: 2px;
+        left: 0px;
+    }
+    /* ribbon menu */
+        .ribbon-menu .link-group{
+            background-color: rgb(44, 44, 44);
+            position: absolute;
+            height: auto !important;
+            z-index: 999;
+            width: 2em !important;
+            padding: 0.5em;
+            margin-left: 10px;
+        }
+        .ribbon-menu .link-group:after{
+            left: 0;
+            content: "";
+            position: absolute;
+            display: block;
+            border: 1em solid rgb(44, 44, 44);
+            border-bottom-color: transparent;
+        }
+        .ribbon-menu .link-group:hover{
+            background-color: rgba(44, 44, 44,0.8);
+            width: 120px !important;
+            margin-left: 0px;
+            padding: 0em;
+        }
+        .ribbon-menu .link-group:hover:after{
+            display: none;
+        }
+        .ribbon-menu .link-group .group-item.item-hidden.active{
+            display: block;
+        }
+        .ribbon-menu .link-group .group-item:not(.active),
+        .ribbon-menu .link-group .clearline{
+            display: none;
+        }
+        .ribbon-menu .link-group:hover .group-item:not(.active),
+        .ribbon-menu .link-group:hover .clearline{
+            display: block;
+        }
+        .ribbon-menu .link-group:hover .group-item.item-hidden{
+            display: none;
+        }
+        .ribbon-menu .link-group:hover .item-hidden.active a{
+            text-align: right;
+            padding: 10px;
+        }
+        .ribbon-menu .group-item.active a[data-toggle="tab"]{
+            background-color: rgb(44, 44, 44);
+        }
+        .ribbon-menu .tab-content{
+            width: 100%;
+        }
+/* content */
+    .pane{
+        width: 100%;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .link-group{
+        background-color: rgba(0,0,0,0.2);
+        height: 100%;
+        padding: 0px;
+    }
+    .link-group ul{
+        margin-bottom: 0px;
+        list-style: none; 
+    }
+    .group-item a{
+        display: block;
+        padding: 20px 0px;
+        text-align: center;
+        color: #776648;
+    }
+    .group-item.item-hidden{
+        display: none;
+    }
+    .group-item.active a[data-toggle="tab"], .group-item:hover a{
+        background-color: rgba(255,255,255,0.1);
+        color: #fad694;
+        text-decoration: none;
+    }
+    .pane div{
+        height: 100%;
+    }
+    .pane .tab-content{
+        padding: 2% 5%;
+    }
+    .clearline{
+        height: 1px !important; 
+        background-color: rgba(200,200,200,0.2);
+    }
+
+    /* pane carousel */
+        .pane-carousel .carousel-control{
+            width: 9%;
+        }
+        .pane-carousel .carousel-control.right{
+            background: rgba(0,0,0,0);
+            right: -9%;
+        }
+        .pane-carousel .carousel-control.left{
+            background: rgba(0,0,0,0);
+            left: -9%;
+        }
+        /* in designer page only for now */
+        .pane-carousel .carousel-caption{
+            width: 100%;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            text-align: left;
+        }
+
+
+    /* customer-list */
+        #customer-carousel{
+            padding: 5% 0;
+            margin: 8% 10%;
+            height: auto;
+        }
+
+
+    /* base */
+        .pane{
+            height: 600px
+        }
+/* footer */
+    #footer{
+        padding: 20px 0;
+    }
+    #ft-lnks{
+        text-align: right;
+    }
+    #footer .link{
+        border-width: 0px;
+        border-left-width: 1px;
+        border-style: solid;
+        border-color: rgba(255,255,255,0.2);
+        padding: 0 15px;
+    }
+    .link:first-child{
+        border-width: 0px;
+    }
+    .link:last-child{
+        padding-right: 0px;
+    }
+    #copyright{
+        margin-top:15px;
+        text-align: right;
+        padding: 0px;
+    }
+/* bootstrap over write */
+    a{
+        color: #fad694;
+    }
+    a:hover{
+        color: #fad694;
+    }
+    a:focus{
+        color: #fad694;
+        outline: none;
+        text-decoration: none;
+    }
+    /* move the arrows of carousel out when wider than 1400px */
+    @media (min-width: 1400px){
+        .carousel-control{
+            width: 10%;
+        }
+        .carousel-control.right{
+            background: rgba(0,0,0,0);
+            right: -8%;
+        }
+        .carousel-control.left{
+            background: rgba(0,0,0,0);
+            left: -8%;
+        }
+    }
+    .carousel-indicators li{
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        margin: 1px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color: #000;
+        background-color: rgba(0,0,0,0.5);
+        border: 0px solid #fad694;
+        border-radius: 5px;
+    }
+    .carousel-indicators .active{
+        width: 7px;
+        height: 7px;
+        margin: 0;
+        background-color: #fad694;
+    }
+    .carousel-control:focus, .carousel-control:hover {
+        color: #fad694;
+    }
+
+    #logo{
+        font-size: 48px;
+        font-family:Georgia,"Times New Roman",Serif;
+        margin-top: 10px;
+        text-indent: 50px;
+        text-align: left;
+    }
+    #biaoqian{
+        color: #fad694;
+        font-size: 14px;
+       text-indent: 30px;
+    }
